@@ -1,0 +1,65 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.7.2/default/bulmaswatch.min.css" integrity="sha256-Ck/LLH3sTe1l4+zueQcvPbLtKXMthMVSYm7cXMhuuFA=" crossorigin="anonymous" />
+<title>位置情報 送信機</title>
+</head>
+<body>
+<header>
+<section class="hero is-info">
+	<div class="hero-body">
+		<div class="container">
+			<h1 class="title">
+			位置情報送信機
+			</h1>
+			<h2 class="subtitle">
+			ページを開いている間、サーバーに位置情報を送信します
+			</h2>
+		</div>
+	</div>
+</section>
+</header>
+<main>
+<!-- 送信表 -->
+<div class="section">
+	<div class="container">
+		<div class="columns is-centered">
+		  <div class="column">
+			<table align="center" class="table is-fullwidth is-bordered">
+				<tbody id="result">
+					<tr>
+						<th>緯度</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<th>経度</th>
+						<td>0</td>
+					</tr>
+					<tr>
+						<th>送信した回数</th>
+						<td>0</td>
+					</tr>
+				</tbody>
+			</table>
+		  </div>
+		</div>
+	</div>
+</div>
+<!-- 切り替えボタン -->
+<div class="section">
+	<div class="container">
+		<div class="columns is-centered">
+		  <div class="column">
+			<button id="toggleBtn" onclick="toggleSend()" class="button is-primary is-large is-fullwidth">送信を開始する</button>
+		  </div>
+		</div>
+	</div>
+</div>
+</main>
+</body>
+<script type="text/javascript" src="dateConverter.js"></script>
+<script type="text/javascript" src="locationSender.js"></script>
+</html>
